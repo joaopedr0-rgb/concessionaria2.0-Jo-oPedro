@@ -2,10 +2,12 @@ package view;
 import java.util.Scanner;
 import java.util.ArrayList;
 import Controller.CarrosController;
+import model.carrosModel;
 public class menuCliente {
     public static void main(String[] args) {
-        
+        CarrosController carrosController = new CarrosController();
         Scanner scCliente = new Scanner(System.in);
+        
 
         System.out.println("Bem vindo à área do cliente!");
         System.out.println("Aqui você pode gerenciar suas compras e informações.");
@@ -16,8 +18,8 @@ public class menuCliente {
         switch (option) {
             case 1:
                 System.out.println("Catálogo de veículos selecionado.");
-                u
-                for (String item : carrosController.getListaCarros()) {
+                
+                for (carrosModel item : carrosController.getListaCarros()) {
                 System.out.println(item);
                 }
                 break;
