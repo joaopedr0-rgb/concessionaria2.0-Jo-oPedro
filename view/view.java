@@ -13,11 +13,12 @@ public class view{
 
         switch(option){
             case 1:
-                System.out.println("Área do funcionário selecionada.");
+                menuFuncionario.main(args);
                 // Aqui você pode adicionar mais funcionalidades para funcionários
                 break;
             case 2:
                 System.out.println("Área do cliente selecionada.");
+                menuCliente.main(args);
                 // Aqui você pode adicionar mais funcionalidades para clientes
                 break;
             default:

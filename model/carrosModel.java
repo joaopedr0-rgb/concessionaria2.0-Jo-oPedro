@@ -9,11 +9,14 @@ public class carrosModel {
 
     private String cor;
 
-    public carrosModel(String nomeVeiculo, String marca, int ano, String cor) {
+    private double preco;
+
+    public carrosModel(String nomeVeiculo, String marca, int ano, String cor, double preco) {
         this.nomeveiculo = nomeVeiculo;
         this.marca = marca;
         this.ano = ano;
         this.cor = cor;
+        this.preco = preco;
     }
 
     public String getNomeveiculo() {
@@ -46,5 +49,11 @@ public class carrosModel {
 
     public void setCor(String cor) {
         this.cor = cor;
+    }
+    public double getPreco() {
+        return preco;
+    }
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 }

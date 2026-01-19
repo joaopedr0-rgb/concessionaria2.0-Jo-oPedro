@@ -1,15 +1,23 @@
 package Controller;
 
-import java.util.List;
+
 import java.util.ArrayList;
 
 public class FuncionarioController {
     public class funcionariosModel {
         ArrayList<String> listafuncionarios = new ArrayList<String>();
 
-        public funcionariosModel() {
-            listafuncionarios.add("João Silva - Gerente - joao.silva@concessionaria.com - 28");
-            listafuncionarios.add("Maria Oliveira - Vendedora - maria.oliveira@concessionaria.com - 25");
+        public funcionariosModel(String nome, String cargo, String email, int idade) {
+          if (nome == null || nome.trim().isEmpty() || cargo == null || cargo.trim().isEmpty() || email == null || email.trim().isEmpty() || idade <= 0) {
+              throw new IllegalArgumentException("Todos os campos devem ser preenchidos corretamente.");
+
+              
+          }
+          listafuncionarios.add("Nome: " + nome + ", Cargo: " + cargo + ", Email: " + email + ", Idade: " + idade);
+
+        }
+        public ArrayList<String> getListaFuncionarios() {
+            return listafuncionarios;
         }
     }
 }
